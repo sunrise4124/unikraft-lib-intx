@@ -1,6 +1,6 @@
 UK_ROOT ?= $(PWD)/.unikraft/unikraft
 UK_LIBS ?= $(PWD)/.unikraft/libs
-LIBS :=
+LIBS := $(UK_LIBS)/lib-libcxxabi:$(UK_LIBS)/lib-libcxx:$(UK_LIBS)/lib-libunwind:$(UK_LIBS)/lib-compiler-rt:$(UK_LIBS)/lib-musl:$(UK_LIBS)/lib-googletest
 
 all:
 	@$(MAKE) -C $(UK_ROOT) A=$(PWD) L=$(LIBS)
